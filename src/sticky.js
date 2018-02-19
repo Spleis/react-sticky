@@ -1,18 +1,19 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class Sticky extends React.Component {
 
   static propTypes = {
-    isActive: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    stickyClassName: React.PropTypes.string,
-    stickyStyle: React.PropTypes.object,
-    topOffset: React.PropTypes.number,
-    bottomOffset: React.PropTypes.number,
-    onStickyStateChange: React.PropTypes.func,
-    disablePlaceholder: React.PropTypes.bool,
+    isActive: PropTypes.bool,
+    className: PropTypes.string,
+    style: PropTypes.object,
+    stickyClassName: PropTypes.string,
+    stickyStyle: PropTypes.object,
+    topOffset: PropTypes.number,
+    bottomOffset: PropTypes.number,
+    onStickyStateChange: PropTypes.func,
+    disablePlaceholder: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -28,7 +29,7 @@ export default class Sticky extends React.Component {
   }
 
   static contextTypes = {
-    'sticky-channel': React.PropTypes.any
+    'sticky-channel': PropTypes.any
   }
 
   constructor(props) {
