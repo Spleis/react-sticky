@@ -105,6 +105,9 @@ export default class Sticky extends React.Component {
     const xOffset = this.getXOffset();
     const distanceFromBottom = this.getDistanceFromBottom();
     const hasChanged = this.state.isSticky !== isSticky;
+    if (distanceFromBottom === this.state.distanceFromBottom) {
+      return;
+    }
 
     this.setState({ isSticky, height, width, xOffset, distanceFromBottom });
 
