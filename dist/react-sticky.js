@@ -519,6 +519,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var xOffset = _this.getXOffset();
 	      var distanceFromBottom = _this.getDistanceFromBottom();
 	      var hasChanged = _this.state.isSticky !== isSticky;
+	      if (distanceFromBottom === _this.state.distanceFromBottom) {
+	        return;
+	      }
 
 	      _this.setState({ isSticky: isSticky, height: height, width: width, xOffset: xOffset, distanceFromBottom: distanceFromBottom });
 
